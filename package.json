@@ -1,0 +1,22 @@
+{
+  "name": "destina",
+  "version": "1.0.0",
+  "description": "Shared travel mapping",
+  "scripts": {
+    "lint": "eslint '.'",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-google": "^0.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verythorough/destina.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/verythorough/destina/issues"
+  },
+  "homepage": "https://github.com/verythorough/destina#readme"
+}

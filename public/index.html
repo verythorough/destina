@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Destina</title>
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+    * element that contains the map. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    .app-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 2%;
+      background: #000;
+      color: #fff;
+    }
+    .header-title {
+      margin: 0;
+    }
+    input, button, textarea, label {
+      margin: 0.25em;
+      padding: 0.25em;
+      font-size: 1rem;
+    }
+    input:focus::-webkit-input-placeholder {
+      opacity: 0;
+    }
+    button {
+      background: #ffeb3b;
+      border: 1px solid #999;
+      float: right;
+    }
+    button:hover, button:focus {
+      background: #ffc107;
+    }
+    #map {
+      flex-grow: 1;
+    }
+    .add-dialog textarea {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="header-title">Destina</h1>
+    <div id="display-name-div" style="display:none" hidden>
+      <label for="display-name-text">Display name:</label>
+      <input id="display-name-text" type="text" name="display-name" placeholder="anonymous">
+    </div>
+  </header>
+  <main id="map" class="main">
+  </main>
+  <div class="add-dialog" style="display: none;" hidden>
+    <label for="comment-input">Comment:</label>
+    <textarea id="comment-input" name="markercomment"></textarea>
+    <button id="save-marker-btn">Save marker</button> 
+  </div>
+  
+  <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATWmcKDvL4zTEBq6bb3wHuCtL5uyThlo8&callback=initMap"
+  async defer></script>
+  <script src="js/app.js"></script>
+  
+</body>
+</html>
