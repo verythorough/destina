@@ -8,7 +8,9 @@
   },
   "devDependencies": {
     "eslint": "^3.8.1",
-    "eslint-config-google": "^0.7.0"
+    "eslint-config-google": "^0.7.0",
+    "gulp": "^3.9.1",
+    "sw-precache": "^4.2.1"
   },
   "repository": {
     "type": "git",

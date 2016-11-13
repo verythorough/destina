@@ -17,7 +17,7 @@
   <!-- Windows tiles settings -->  
   <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#000000">
-  
+    
   <style>
     /* Always set the map height explicitly to define the size of the div
     * element that contains the map. */
@@ -89,6 +89,14 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATWmcKDvL4zTEBq6bb3wHuCtL5uyThlo8&callback=initMap"
   async defer></script>
   <script src="js/app.js"></script>
-  
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(function() { 
+        console.log("Service Worker Registered"); 
+      }).catch(function(e) {
+        console.error('Error during service worker registration:', e);
+      });
+    }
+  </script>
 </body>
 </html>
